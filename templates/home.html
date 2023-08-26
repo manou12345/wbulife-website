@@ -2,40 +2,29 @@
 <html>
   <head>
     <title> Wbu Math Help</title>
-    <style>
-      h1{
-        font-size: 80px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(100, 200, 150);
-        text-align: center;
-      }
-
-      #banner{
-        height: 190px; 
-        width: 90%;
-      }
-
-      #container{
-        max-width: 720px;
-        margin:0 auto 0 auto; 
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
     <div id="container">
-      <h1>Math Safe Space</h1> 
+      <h1 class="text-center">Give a name</h1> 
       <img id= "banner" src="https://wbulife-website.manuelladonmeza.repl.co/static/banner2.jpeg">
       <h2>About the page</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <h3>Please select your class level</h3>
-      <div style="text-align:center;">
-        <button>Intermediate Algebra</button>
-        <button>Colleg Algebra</button>
-        <button>Calculus 1</button>
-        <button>Calculus 2</button>
-        <button>Calculus 3</button>               
+      
+      <div>
+        {% for classe in classs %}
+          <div class="border-bottom row" style= "margin:20px;"> 
+            <div class= 'col-9'>
+              <h5 style="color:rgb(120,120,120)">{{classe['name']}}</h5> 
+            </div>
+            <div class='col-3'>
+              <button type="button" class="btn btn-outline-primary">Open</button>
+            </div>
+          </div>
+        {% endfor %}
       </div>
-    </div>
   </body>
 </html>
