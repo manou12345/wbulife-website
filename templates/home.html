@@ -16,14 +16,7 @@
       
       <div>
         {% for classe in classs %}
-          <div class="border-bottom row" style= "margin:20px;"> 
-            <div class= 'col-9'>
-              <h5 style="color:rgb(120,120,120)">{{classe['name']}}</h5> 
-            </div>
-            <div class='col-3'>
-              <button type="button" class="btn btn-outline-primary">Open</button>
-            </div>
-          </div>
+          {% include 'classItem.html' %}
         {% endfor %}
       </div>
   </body>
