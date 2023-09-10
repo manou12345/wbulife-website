@@ -2,22 +2,63 @@
 <html>
   <head>
     <title> Wbu Math Help</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      h1{
+        font-size: 80px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(200,100,130);
+        text-align: center;
+      }
+
+      #banner{
+        height: 190px; 
+        width: 90%;
+        object-fit: cov
+      }
+
+      #container{
+        max-width: 720px;
+        margin:0 auto 0 auto; 
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-bottom: 4px;
+        text-align: center;
+        text-decoration: none;
+        background-color: rgb(200,100,130);  /* Button                     background color */
+        color: #fff; /* Text color */
+        border: 1px solid #007bff; /* Border color */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: #0056b3; /* Button background color on hover */
+        border: 1px solid #0056b3; /* Border color on hover */
+      }
+
+    </style>
   </head>
   <body>
     <div id="container">
-      <h1 class="text-center">Give a name</h1> 
-      <img id= "banner" src="https://wbulife-website.manuelladonmeza.repl.co/static/banner2.jpeg">
+      <h1>All In Here</h1> 
+      <img id= "banner" src="https://wbulife-website.manuelladonmeza.repl.co/static/banner3.jpg">
       <h2>About the page</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <h3>Please select your class level</h3>
-      
-      <div>
-        {% for classe in classs %}
-          {% include 'classItem.html' %}
-        {% endfor %}
+      <div style="text-align:center;">
+        <a class="button" href='interAlg.html'>intermediate Algebra</a>
+        <a class="button">Colleg Algebra</a>
+        <a class="button">Calculus 1</a>
+        <a class="button">Calculus 2</a>
+        <a class="button">Calculus 3</a>   
+        <a class="button">Linear Algebra</a>   
+        <a class="button">Proofs</a>   
+        <a class="button">Numerical Analysis</a>   
+        <a class="button">Abstract Algebra</a>   
+
       </div>
+    </div>
   </body>
 </html>
